@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Page</title>
+    </head>
+    <body>
+        <a href="products.html">Products</a>
+        <a href="checkout.html">Checkout</a>
+        <table id="adminTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+        </table>
+        
+        <form id="adminForm">
+            <input type="text" id="idInput" placeholder="ID">
+            <input type="text" id="nameInput" placeholder="Name">
+            <input type="text" id="descriptionInput" placeholder="Description">
+            <input type="text" id="priceInput" placeholder="Price">
+            <button type="button" onclick="addProduct()">Add Product</button>
+        </form>
+        <script src="admin.js"></script>
+    </body>
+    </html>
+    

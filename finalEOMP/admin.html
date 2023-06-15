@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Page</title>
+</head>
+<body>
+  <h1>Admin Page</h1>
+  <a href="products.html">Go to Products</a>
+<a href="checkout.html">Go to Checkout</a>
+
+
+  <table id="adminTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table data will be dynamically added using JavaScript -->
+    </tbody>
+  </table>
+
+  <h2>Add Product</h2>
+  <input type="text" id="productId" placeholder="Product ID">
+  <input type="text" id="productName" placeholder="Product Name">
+  <input type="text" id="productDescription" placeholder="Product Description">
+  <input type="number" id="productPrice" placeholder="Product Price">
+  <button onclick="addProduct()">Add</button>
+
+  <script src="admin.js"></script>
+</body>
+</html>

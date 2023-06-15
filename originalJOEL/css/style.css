@@ -1,0 +1,158 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Custom variables */
+:root {
+    --primaryColor: black;
+    --secondaryColor: white;
+    --alternativeColor: rgb(199, 190, 190);
+    --cardBoxShow: .4vw .5vw .3vw .2vw rgb(113, 139, 113) ;
+    --firstButton: rgb(144, 217, 132);
+    --secondButton: rgb(156, 166, 176);
+}
+/* Layout */
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    background: var(--alternativeColor) url('https://i.postimg.cc/W3tfwN1H/joel1.jpg') no-repeat center center ;
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+/* header */
+nav, footer {
+    background-color: var(--alternativeColor);
+}
+nav {
+    z-index: 20;
+}
+ul li {
+    margin: 0 .3rem;
+}
+ul, span li {
+    list-style: none;
+}
+ul a {
+    font-size: 1.5rem;
+}
+/* Main */
+main {
+    min-height: 100vh;
+}
+#productCard, nav ul,
+.flex-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav, ul, .flex-wrapper {
+    justify-content: space-evenly;
+}
+#productCard {
+    justify-content: space-around;
+}
+.row > button {
+    width: fit-content;
+}
+#searchByMake, 
+#sortingByPrice {
+    border-radius: 10px 5px;
+    padding: 5px;
+    width: fit-content;
+}
+#sortingByPrice {
+    margin-left: 5rem;
+}
+
+/* Card */
+.card {
+    width: 20rem;
+    grid-template-rows: 3rem auto 2rem;
+    box-shadow: var(--cardBoxShow);
+    background-color: var(--alternativeColor);
+    border-radius: 10px 5px;
+    gap: 1rem;
+}
+.card-body {
+    padding: 0;
+}
+.card-body button {
+    margin-top: .4rem ;
+}
+.card-body img {
+    max-height: 13rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+/* table */
+table {
+    margin: 1rem auto ;
+    width: 100%;
+}
+table .flex-wrapper {
+    background-color: white;
+}
+table button {
+    width: 100%;
+    margin: .5rem 0;
+    border-radius: 10px 5px;
+}
+table, th{
+    border: 1px solid var(--alternativeColor);
+}
+table tr{
+    margin: 5px 0;
+}
+table td {
+    border: 1px dotted var(--primaryColor);
+}
+table img {
+    width: 5rem;
+    object-fit: cover;
+    object-position: top;
+}
+.amount-due {
+    background-color: var(--alternativeColor);
+}
+/* Media query */
+@media (width <= 700px) {
+    body{
+        overflow-x: hidden;
+    } 
+    .card {
+        width: 15rem;
+    }
+    ul {
+        flex-flow: row wrap;
+        gap: 1rem;
+        justify-content: flex-start!important;
+    }
+    form {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    form>* {
+        width: 100%!important;
+        margin-left: 0!important;
+    }
+    .row >* {
+        padding: 0;
+    }
+    /* row > form*/
+    .row > form {
+        width: fit-content;      
+    }
+    .row > button {
+        margin: 0 auto!important;
+    }
+    .row > table {
+        overflow-x: scroll;
+    }
+    table, table h4{
+        font-size: 12px;
+    }
+}
